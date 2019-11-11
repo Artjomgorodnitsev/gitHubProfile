@@ -1,0 +1,8 @@
+1. API- Application programming Inerface
+2. Client - Entity which is using API, by executing HTTP(s) calls
+3. Server- Entity which serves API, by providing a response to HTTP(s) calls
+4. JSON - lightweight data inerface format
+5. entity - сущность
+6. to serve - предоставлять
+7. response - отзыв, ответ
+8. inerchange - обмен
