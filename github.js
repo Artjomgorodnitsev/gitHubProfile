@@ -10,12 +10,21 @@ class GitHub{
     //get a user info
 
     async getUserData(){
-        let urlProfile = `http://api.github.com/${this.user}?client_id=${this.client_id}&client_secrt=${this.client_secret}`;
-        let urlRepos = `http://api.github.com/${this.user}/repos?per_page=${this.repos_count}&sort=${this.repos_sort}&${this.client_id}&client_secrt=${this.client_secret}`;
+        let urlProfile = `http://api.github.com/users/${this.user}?client_id=${this.client_id}&client_secrt=${this.client_secret}`;
+        let urlRepos = `http://api.github.com/users/${this.user}/repos?per_page=${this.repos_count}&sort=${this.repos_sort}&${this.client_id}&client_secrt=${this.client_secret}`;
 
 
         const profileResponse = await fetch(urlProfile);
         const reposResponse = await fetch(urlRepos);
+
+        const profile = await profileResponse.json();
+        const repo = await reposResponse.json();
+
+
+        return{
+            profile,
+            repo
+        }
     }
 
 }
