@@ -7,5 +7,7 @@ gitHub.getUserData()
     console.log(data.repo);
 
     ui.showProfile(data.profile);
+    ui.showRepos(data.repo);
+
 
 });
